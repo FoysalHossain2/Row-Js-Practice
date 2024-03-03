@@ -1,109 +1,77 @@
+const coding = ['js','ruby', 'java', 'çpp', 'python']
+
+const value = coding.forEach(()=>{
+    // console.log(value);
+    // return items
+})
+// console.log(value);
 
 
+const myNum = [1,2,3,4,5,6,7,8,9,10]
 
-// // **********object literals*************
+// const newNum = myNum.filter( (num)=> {
+//    return num > 4
+// })
 
-// const mySym = Symbol('key1')
+// console.log(newNum);
 
-// const JsUser = {
-//     name: "Foysla",
-//     [mySym]: "myKey1",
-//     "location": "Dhaka,Manikgonj",
-//     email: "fh375170@gmail.com",
-//     isLoggedIn: false,
-//     lastLoginDin: ["Monday" , "Saturday"]
-// } 
+const newNum = [];
 
-// console.log(JsUser.email);
-// console.log(JsUser['email']);
-// console.log(JsUser['location']);
-// console.log(JsUser[mySym]);
-
-// JsUser.email = "fh@gmail.com"
-// Object.freeze(JsUser)
-// JsUser.email = "fHossain@gmail.com"
-
-
-
-// object literals
-
-const mySym = Symbol("key1")
-
-const JsUser = {
-    name: "Foysal",
-    "fullName": "Foysal Hossain",
-    location: "Bangladesh Dhaka Manikgonj",
-    [mySym]: "myKey1",
-    email: "fh@gail.com",
-    isLoggedIn: "false",
-    lastLoginDays: ["Monday" , "Saturday"]
-}   
-
-// console.log(JsUser.email);
-// console.log(JsUser["email"]);
-// console.log(JsUser["fullName"]);
-// console.log( JsUser[mySym]);
-
-JsUser.email = "fh@gail.com"
-// Object.freeze(JsUser)
-JsUser.email = "Tomal@gmail.com"
-// console.log(JsUser);
-
-JsUser.greeting = function(){
-    console.log("Hello js User");
-}
-
-JsUser.greetingTwo = function(){
-    // console.log(`Hello js User, ${this.name}`);
-}
-
-// console.log(JsUser.greeting());
-// console.log(JsUser.greetingTwo());
-
-// // **********object literals************* end
-
-
-
-
-
-// const tinderUser = new Object() ###this is method singleton Object
-// const tinderUser = {} ##this is none singleton object
-
-const tinderUser = {}
-tinderUser.id = 123,
-tinderUser.name = "some",
-tinderUser.email = "fh375170@gmail.com",
-tinderUser.isLoggedIn = true
-// console.log(tinderUse);
-
-const regularUser = {
-    email: "SomeOne@gmail.com",
-    fullName: {
-        userFullName: {
-            firstName: "Foysal",
-            lastName: "Hossain"
-        }
+myNum.forEach( (num) => {
+    if (num > 4) {
+        newNum.push(num)
     }
-}
+})
 
-// console.log(regularUser.fullName.userFullName);
-
-const obj1 = {1: 'a' ,2: 'b'}
-const obj2 = {3: 'a' ,4: 'b'}
-const obj3 = {5: 'a' ,6: 'b'}
-
-const obj4 ={...obj1, ...obj2} 
-// console.log(obj4);
-
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
-
-
-// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(newNum);
 
 
 
 
 
+// const books = [
+//     {title: 'Book one', genre: 'Fiction', publish: 1981, edition: 2004},
+//     {title: 'BooK Two', genre: 'Non-Fiction', publish: 1992, edition: 2008},
+//     {title: 'Book Three', genre: 'History', publish: 1999, edition: 2007, },
+//     {title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010, },
+//     {title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014, },
+//     {title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010, },
+//     {title: 'Book Seven', genre: 'History', publish: 1986, edition: 2016, },
+//     {title: 'Book Eight', genre: 'Non-Fiction', publish: 2011, edition: 2007, },
+// ]
+
+// let userBooks = books.filter( (bk) => bk.genre === 'History')
+
+// // userBooks = books.filter( (bk) => {return bk.publish >= 2000 })
+
+// userBooks = books.filter( (bk) => {
+//     return bk.publish <= 1995 && bk.genre === "History"
+// } )
+
+// console.log(userBooks);
+
+
+
+    
+/* map */ 
+
+const myNumbers = [1,2,3,4,5,6,7,8,9,10]
+
+// const newNumbers = myNumbers.map((num)=>{return num + 10}) 
+
+// chaining Method  
+const newNumbers = myNumbers
+                .map((num)=> num * 10)
+                .map((num) => num + 1)
+                .filter((num) => num >= 40)                
+
+// console.log(newNumbers);]
+
+const myNum02 = [1,2,3,,4]
+
+const myTotal = myNum02.reduce(function (acc, curr){
+    console.log(`acc: ${acc} and curr:${curr}`);
+    return acc + curr
+})
+
+console.log(myTotal);
